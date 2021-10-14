@@ -5,6 +5,9 @@ import android.media.Image;
 import androidx.annotation.NonNull;
 
 import java.io.Serializable;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class User implements Serializable {
     private String firstname;
@@ -25,7 +28,7 @@ public class User implements Serializable {
         this.passwordHash = passwordHash;
     }
 
-    public User(){
+    public User() {
 
     }
 
@@ -85,6 +88,34 @@ public class User implements Serializable {
         this.passwordHash = passwordHash;
     }
 
+
+
+
+    public void save() {
+        SerializationFactory.getInstance().save(this);
+    }
+
+    public void remove() {
+        SerializationFactory.getInstance().remove(this);
+    }
+
+    public static User selectByEmailPassword(String email, String password) {
+        return SerializationFactory.getInstance().selectUserByEmailPassword(email, password);
+    }
+
+    public static String encryptPassword(String password) {
+        try {
+            MessageDigest m = MessageDigest.getInstance("MD5");
+            m.update(password.getBytes(), 0, password.length());
+            return new BigInteger(1, m.digest()).toString(16);
+        } catch (NoSuchAlgorithmException e) {
+            //Impossible
+            System.out.println("Error during encryption of: \"" + password + "\".");
+            return null;
+        }
+    }
+
+
     @NonNull
     @Override
     public String toString() {
@@ -97,4 +128,18 @@ public class User implements Serializable {
                 '}';
     }
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        User iUser = (User) o;
+
+        return getEmail().equals(iUser.getEmail());
+    }
 }
