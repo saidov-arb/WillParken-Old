@@ -1,8 +1,10 @@
-package com.willparken;
+package com.willparken.control;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.willparken.R;
 
 public class MainActivity extends AppCompatActivity {
 
