@@ -1,22 +1,24 @@
 package com.willparken.model;
 
+import android.media.Image;
+
 import androidx.annotation.NonNull;
 
 import java.io.Serializable;
 
 public class User implements Serializable {
-    private String name;
-    private String familyname;
-    private String drivingLicense;
+    private String firstname;
+    private String lastname;
+    private Image profilePicture;
     private String address;
     private int telephoneNumber;
     private String email;
     private String passwordHash;
 
-    public User(String name, String familyname, String drivingLicense, String address, int telephoneNumber, String email, String passwordHash) {
-        this.name = name;
-        this.familyname = familyname;
-        this.drivingLicense = drivingLicense;
+    public User(String firstname, String lastname, Image profilePicture, String address, int telephoneNumber, String email, String passwordHash) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.profilePicture = profilePicture;
         this.address = address;
         this.telephoneNumber = telephoneNumber;
         this.email = email;
@@ -27,28 +29,28 @@ public class User implements Serializable {
 
     }
 
-    public String getName() {
-        return name;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getFamilyname() {
-        return familyname;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setFamilyname(String familyname) {
-        this.familyname = familyname;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
-    public String getDrivingLicense() {
-        return drivingLicense;
+    public Image getProfilePicture() {
+        return profilePicture;
     }
 
-    public void setDrivingLicense(String drivingLicense) {
-        this.drivingLicense = drivingLicense;
+    public void setProfilePicture(Image profilePicture) {
+        this.profilePicture = profilePicture;
     }
 
     public String getAddress() {
@@ -87,9 +89,8 @@ public class User implements Serializable {
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
-                ", familyname='" + familyname + '\'' +
-                ", drivingLicense='" + drivingLicense + '\'' +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
                 ", address='" + address + '\'' +
                 ", telephoneNumber=" + telephoneNumber +
                 ", email='" + email + '\'' +
