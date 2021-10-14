@@ -15,7 +15,7 @@ public class User implements Serializable {
     private String email;
     private String passwordHash;
 
-    public User(String firstname, String lastname, Image profilePicture, String address, int telephoneNumber, String email, String passwordHash) {
+    public User(String firstname, String lastname, Image profilePicture, String address, String telephoneNumber, String email, String passwordHash) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.profilePicture = profilePicture;
@@ -61,11 +61,11 @@ public class User implements Serializable {
         this.address = address;
     }
 
-    public int getTelephoneNumber() {
+    public String getTelephoneNumber() {
         return telephoneNumber;
     }
 
-    public void setTelephoneNumber(int telephoneNumber) {
+    public void setTelephoneNumber(String telephoneNumber) {
         this.telephoneNumber = telephoneNumber;
     }
 
