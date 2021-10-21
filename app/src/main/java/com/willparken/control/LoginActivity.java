@@ -32,15 +32,10 @@ public class LoginActivity extends AppCompatActivity {
 
         SerializationFactory.getInstance().restore(getApplicationContext());
 
-//        txt_email = (EditText) findViewById(R.id.txt_username);
-//        txt_password = (EditText) findViewById(R.id.txt_password);
-//        btn_login = (Button) findViewById(R.id.btn_login);
-//        btn_register = (Button) findViewById(R.id.btn_register);
-
-        txt_email = new EditText(getApplicationContext());
-        txt_password = new EditText(getApplicationContext());
-        btn_login = new Button(getApplicationContext());
-        btn_register = new Button(getApplicationContext());
+        txt_email = (EditText) findViewById(R.id.txt_email);
+        txt_password = (EditText) findViewById(R.id.txt_password);
+        btn_login = (Button) findViewById(R.id.btn_login);
+        btn_register = (Button) findViewById(R.id.btn_register);
 
         intentRegister = new Intent(this, RegisterActivity.class);
 
