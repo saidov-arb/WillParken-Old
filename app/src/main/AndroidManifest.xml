@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WillParken">
         <activity
-            android:name=".control.MainActivity"
+            android:name=".control.RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".control.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
