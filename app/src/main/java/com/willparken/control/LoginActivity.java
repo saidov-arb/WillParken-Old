@@ -38,30 +38,33 @@ public class LoginActivity extends AppCompatActivity {
         btn_register = (Button) findViewById(R.id.btn_register);
 
         intentRegister = new Intent(this, RegisterActivity.class);
+        intentHome = new Intent(this, OutputActivity.class);
 
         btn_login.setOnClickListener(v -> {
-            Toast.makeText(getApplicationContext(),"Login clicked.", Toast.LENGTH_LONG).show();
             clickOnLogin();
         });
         btn_register.setOnClickListener(v -> {
-            Toast.makeText(getApplicationContext(),"Register clicked.",Toast.LENGTH_LONG).show();
+            finish();
             startActivity(intentRegister);
         });
     }
 
 
     void clickOnLogin(){
-        Pattern pattern = Pattern.compile("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}");
-        Matcher matcher = pattern.matcher(txt_email.getText().toString());
+        Pattern emailPattern = Pattern.compile("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}");
+        Matcher emailMatcher = emailPattern.matcher(txt_email.getText().toString());
         if (!txt_email.getText().toString().equals("") && !txt_password.getText().toString().equals("")) {
-            if (matcher.matches()) {
+            if (emailMatcher.matches()) {
                 iUser = User.selectByEmailPassword(
                         txt_email.getText().toString(), txt_password.getText().toString());
+            }else{
+                Toast.makeText(getApplicationContext(),"This ain't no Email!",Toast.LENGTH_LONG).show();
             }
         }
         if (iUser != null)
         {
             intentHome.putExtra("iUser",iUser);
+            finish();
             startActivity(intentHome);
         }
         else{

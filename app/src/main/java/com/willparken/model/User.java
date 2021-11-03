@@ -119,13 +119,8 @@ public class User implements Serializable {
     @NonNull
     @Override
     public String toString() {
-        return "User{" +
-                "firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", address='" + address + '\'' +
-                ", telephoneNumber=" + telephoneNumber +
-                ", email='" + email + '\'' +
-                '}';
+        return "USER\nFirstname: "+getFirstname()+"\nLastname: "+getLastname()+"\nEmail: "+getEmail()
+                +"\nAddress: "+getAddress()+"\nTelephone: "+getTelephoneNumber()+"\nPasswordHash: "+getPasswordHash();
     }
 
 

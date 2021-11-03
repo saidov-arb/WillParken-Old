@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WillParken">
         <activity
+            android:name=".control.OutputActivity"
+            android:exported="true" />
+        <activity
             android:name=".control.RegisterActivity"
             android:exported="true" />
         <activity
