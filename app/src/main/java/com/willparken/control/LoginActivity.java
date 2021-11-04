@@ -73,9 +73,9 @@ public class LoginActivity extends AppCompatActivity {
             intentHome.putExtra("iUser",iUser);
             finish();
             startActivity(intentHome);
-        }
-        else{
-            Toast.makeText(getApplicationContext(),"Please check your input!",Toast.LENGTH_LONG).show();
+        }else{
+            txt_email.getBackground().setColorFilter(parseColor("red"), PorterDuff.Mode.SRC_ATOP);
+            txt_password.getBackground().setColorFilter(parseColor("red"), PorterDuff.Mode.SRC_ATOP);
         }
     }
 }
