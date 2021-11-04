@@ -99,10 +99,22 @@ public class User implements Serializable {
         SerializationFactory.getInstance().remove(this);
     }
 
+    /**
+     * See SerializationFactory.selectByEmailPassword
+     * @param email String
+     * @param password String
+     * @return User with the matching email and password
+     */
     public static User selectByEmailPassword(String email, String password) {
         return SerializationFactory.getInstance().selectUserByEmailPassword(email, password);
     }
 
+
+    /**
+     * This method encrypts a string into MD5 Hash and returns it.
+     * @param password String
+     * @return String with ecrypted password
+     */
     public static String encryptPassword(String password) {
         try {
             MessageDigest m = MessageDigest.getInstance("MD5");
@@ -116,6 +128,9 @@ public class User implements Serializable {
     }
 
 
+    /**
+     * @return String with information about the user
+     */
     @NonNull
     @Override
     public String toString() {
@@ -124,6 +139,10 @@ public class User implements Serializable {
     }
 
 
+    /**
+     * @param o Object
+     * @return email equals o.email
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) {

@@ -57,6 +57,8 @@ public class RegisterActivity extends AppCompatActivity {
         btn_register.setOnClickListener(v ->{
             clickOnRegister();
         });
+
+        getSupportActionBar().hide();
     }
 
     void clickOnRegister(){

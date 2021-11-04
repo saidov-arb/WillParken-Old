@@ -22,5 +22,7 @@ public class OutputActivity extends AppCompatActivity {
         txt_output = (TextView) findViewById(R.id.txt_output);
 
         txt_output.setText(iUser.toString());
+
+        getSupportActionBar().setTitle(iUser.getEmail()+" --- Data");
     }
 }

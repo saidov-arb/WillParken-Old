@@ -50,6 +50,9 @@ public class LoginActivity extends AppCompatActivity {
             finish();
             startActivity(intentRegister);
         });
+
+
+        getSupportActionBar().hide();
     }
 
 
