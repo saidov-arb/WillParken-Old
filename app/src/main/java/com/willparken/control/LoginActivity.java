@@ -1,8 +1,11 @@
 package com.willparken.control;
 
+import static android.graphics.Color.parseColor;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -58,7 +61,8 @@ public class LoginActivity extends AppCompatActivity {
                 iUser = User.selectByEmailPassword(
                         txt_email.getText().toString(), txt_password.getText().toString());
             }else{
-                Toast.makeText(getApplicationContext(),"This ain't no Email!",Toast.LENGTH_LONG).show();
+                txt_email.getBackground().setColorFilter(parseColor("red"), PorterDuff.Mode.SRC_ATOP);
+                Toast.makeText(getApplicationContext(),"Wrong email or password!",Toast.LENGTH_LONG).show();
             }
         }
         if (iUser != null)

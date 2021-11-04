@@ -1,8 +1,12 @@
 package com.willparken.control;
 
+import static android.graphics.Color.parseColor;
+import static android.graphics.Color.red;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -60,6 +64,10 @@ public class RegisterActivity extends AppCompatActivity {
         Pattern phonePattern = Pattern.compile("\\d{7,}");
         Matcher emailMatcher = emailPattern.matcher(txt_email.getText().toString());
         Matcher phoneMatcher = phonePattern.matcher(txt_tel.getText().toString());
+        txt_email.getBackground().setColorFilter(parseColor("grey"), PorterDuff.Mode.SRC_ATOP);
+        txt_confirmpassword.getBackground().setColorFilter(parseColor("grey"), PorterDuff.Mode.SRC_ATOP);
+        txt_tel.getBackground().setColorFilter(parseColor("grey"), PorterDuff.Mode.SRC_ATOP);
+
 
         if (!txt_email.getText().toString().equals("") &&
             !txt_password.getText().toString().equals("") &&
@@ -69,38 +77,39 @@ public class RegisterActivity extends AppCompatActivity {
             !txt_address.getText().toString().equals("") &&
             !txt_tel.getText().toString().equals(""))
         {
-            if(!emailMatcher.matches()){
-                Toast.makeText(getApplicationContext(),"Email is not valid!",Toast.LENGTH_LONG).show();
-                return;
+            if(emailMatcher.matches() && txt_password.getText().toString().equals(txt_confirmpassword.getText().toString()) && phoneMatcher.matches()){
+                iUser = new User(txt_firstname.getText().toString(),
+                        txt_lastname.getText().toString(),
+                        null,
+                        txt_address.getText().toString(),
+                        txt_tel.getText().toString(),
+                        txt_email.getText().toString(),
+                        User.encryptPassword(txt_password.getText().toString())
+                );
+                iUser.save();
+                SerializationFactory.getInstance().persist(getApplicationContext());
+                Toast.makeText(getApplicationContext(),"Account created successfully!",Toast.LENGTH_LONG).show();
+                finish();
+                intentHome.putExtra("iUser",iUser);
+                startActivity(intentHome);
             }
-            if(!txt_password.getText().toString().equals(txt_confirmpassword.getText().toString())){
-                Toast.makeText(getApplicationContext(),"Passwords do not match!",Toast.LENGTH_LONG).show();
-                return;
+            else {
+                if (!emailMatcher.matches()) {
+                    txt_email.getBackground().setColorFilter(parseColor("red"), PorterDuff.Mode.SRC_ATOP);
+                    Toast.makeText(getApplicationContext(), "Email is not valid!", Toast.LENGTH_LONG).show();
+                }
+                if (!txt_password.getText().toString().equals(txt_confirmpassword.getText().toString())) {
+                    txt_confirmpassword.getBackground().setColorFilter(parseColor("red"), PorterDuff.Mode.SRC_ATOP);
+                    Toast.makeText(getApplicationContext(), "Passwords do not match!", Toast.LENGTH_LONG).show();
+                }
+                if (!phoneMatcher.matches()) {
+                    txt_tel.getBackground().setColorFilter(parseColor("red"), PorterDuff.Mode.SRC_ATOP);
+                    Toast.makeText(getApplicationContext(), "Phone number is not valid!", Toast.LENGTH_LONG).show();
+                }
             }
-            if(!phoneMatcher.matches()){
-                Toast.makeText(getApplicationContext(),"Phone number is not valid!",Toast.LENGTH_LONG).show();
-                return;
-            }
-            iUser = new User(txt_firstname.getText().toString(),
-                    txt_lastname.getText().toString(),
-                    null,
-                    txt_address.getText().toString(),
-                    txt_tel.getText().toString(),
-                    txt_email.getText().toString(),
-                    User.encryptPassword(txt_password.getText().toString())
-
-            );
             if (SerializationFactory.getInstance().exists(iUser)){
                     Toast.makeText(getApplicationContext(),"Email already in use!",Toast.LENGTH_LONG).show();
-                    return;
             }
-            iUser.save();
-            SerializationFactory.getInstance().persist(getApplicationContext());
-
-            Toast.makeText(getApplicationContext(),"Account created successfully!",Toast.LENGTH_LONG).show();
-            finish();
-            intentHome.putExtra("iUser",iUser);
-            startActivity(intentHome);
         }else{
             Toast.makeText(getApplicationContext(),"Please fill in all Fields.",Toast.LENGTH_LONG).show();
         }
