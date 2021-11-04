@@ -123,10 +123,13 @@ public class SerializationFactory
 
 
     /**
-     *
-     * @param email
-     * @param password
-     * @return
+     * This Method needs an email and a password as parameters.
+     * With these two parameters it checks, whether a User with this email exists and whether
+     * the password matches or not.
+     * If everythings fine, the user with the exact same email will be returned.
+     * @param email String
+     * @param password String
+     * @return User
      */
     public User selectUserByEmailPassword(String email,String password)
     {
