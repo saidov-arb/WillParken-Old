@@ -1,14 +1,12 @@
 package com.willparken.control;
 
 import static android.graphics.Color.parseColor;
-import static android.graphics.Color.red;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -82,7 +80,6 @@ public class RegisterActivity extends AppCompatActivity {
             if(emailMatcher.matches() && txt_password.getText().toString().equals(txt_confirmpassword.getText().toString()) && phoneMatcher.matches()){
                 iUser = new User(txt_firstname.getText().toString(),
                         txt_lastname.getText().toString(),
-                        null,
                         txt_address.getText().toString(),
                         txt_tel.getText().toString(),
                         txt_email.getText().toString(),

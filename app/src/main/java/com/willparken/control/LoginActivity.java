@@ -9,6 +9,7 @@ import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.willparken.R;
@@ -22,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText txt_email,txt_password;
     Button btn_login,btn_register;
+    ImageView img_loginicon;
 
     Intent intentRegister;
     Intent intentHome;
@@ -32,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        getSupportActionBar().hide();
 
         SerializationFactory.getInstance().restore(getApplicationContext());
 
@@ -39,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         txt_password = (EditText) findViewById(R.id.txt_password);
         btn_login = (Button) findViewById(R.id.btn_login);
         btn_register = (Button) findViewById(R.id.btn_register);
+        img_loginicon = (ImageView) findViewById(R.id.img_loginicon);
 
         intentRegister = new Intent(this, RegisterActivity.class);
         intentHome = new Intent(this, OutputActivity.class);
@@ -52,7 +56,6 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
-        getSupportActionBar().hide();
     }
 
 

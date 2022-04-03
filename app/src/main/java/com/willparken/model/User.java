@@ -1,6 +1,5 @@
 package com.willparken.model;
 
-import android.media.Image;
 
 import androidx.annotation.NonNull;
 
@@ -12,16 +11,14 @@ import java.security.NoSuchAlgorithmException;
 public class User implements Serializable {
     private String firstname;
     private String lastname;
-    private Image profilePicture;
     private String address;
     private String telephoneNumber;
     private String email;
     private String passwordHash;
 
-    public User(String firstname, String lastname, Image profilePicture, String address, String telephoneNumber, String email, String passwordHash) {
+    public User(String firstname, String lastname, String address, String telephoneNumber, String email, String passwordHash) {
         this.firstname = firstname;
         this.lastname = lastname;
-        this.profilePicture = profilePicture;
         this.address = address;
         this.telephoneNumber = telephoneNumber;
         this.email = email;
@@ -46,14 +43,6 @@ public class User implements Serializable {
 
     public void setLastname(String lastname) {
         this.lastname = lastname;
-    }
-
-    public Image getProfilePicture() {
-        return profilePicture;
-    }
-
-    public void setProfilePicture(Image profilePicture) {
-        this.profilePicture = profilePicture;
     }
 
     public String getAddress() {
