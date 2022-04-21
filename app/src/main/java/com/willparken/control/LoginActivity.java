@@ -27,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
 
     Intent intentRegister;
     Intent intentHome;
+    Intent intentTempsmptActivity;
 
     User iUser;
 
@@ -46,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
 
         intentRegister = new Intent(this, RegisterActivity.class);
         intentHome = new Intent(this, OutputActivity.class);
+        intentTempsmptActivity = new Intent(this, TempsmptActivity.class);
 
         btn_login.setOnClickListener(v -> {
             clickOnLogin();
@@ -75,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
         {
             intentHome.putExtra("iUser",iUser);
             finish();
-            startActivity(intentHome);
+            startActivity(intentTempsmptActivity);
         }else{
             txt_email.getBackground().setColorFilter(parseColor("red"), PorterDuff.Mode.SRC_ATOP);
             txt_password.getBackground().setColorFilter(parseColor("red"), PorterDuff.Mode.SRC_ATOP);

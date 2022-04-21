@@ -26,6 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     Intent intentLogin;
     Intent intentHome;
+    Intent intentTempsmptActivity;
 
     User iUser;
 
@@ -44,6 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         btn_login = (Button) findViewById(R.id.btn_login);
         btn_register = (Button) findViewById(R.id.btn_register);
+        intentTempsmptActivity = new Intent(this, TempsmptActivity.class);
 
         intentLogin = new Intent(this, LoginActivity.class);
         intentHome = new Intent(this, OutputActivity.class);
@@ -90,7 +92,7 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Account created successfully!",Toast.LENGTH_LONG).show();
                 finish();
                 intentHome.putExtra("iUser",iUser);
-                startActivity(intentHome);
+                startActivity(intentTempsmptActivity);
             }
             else {
                 if (!emailMatcher.matches()) {
