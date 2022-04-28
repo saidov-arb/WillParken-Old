@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.willparken.R;
+import com.willparken.model.EmailUtility;
 import com.willparken.model.SerializationFactory;
 import com.willparken.model.User;
 
@@ -29,6 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
     Intent intentTempsmptActivity;
 
     User iUser;
+    EmailUtility emailUtility;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,8 @@ public class RegisterActivity extends AppCompatActivity {
         btn_register.setOnClickListener(v ->{
             clickOnRegister();
         });
+
+        emailUtility = new EmailUtility();
 
         getSupportActionBar().hide();
     }
@@ -90,9 +94,16 @@ public class RegisterActivity extends AppCompatActivity {
                 iUser.save();
                 SerializationFactory.getInstance().persist(getApplicationContext());
                 Toast.makeText(getApplicationContext(),"Account created successfully!",Toast.LENGTH_LONG).show();
+                new Thread(){
+                    @Override
+                    public void run() {
+                        emailUtility.sendMail(iUser.getEmail(), "WillParken > Welcome!","Welcome to WillParken!\nWe hope you like our product!");
+                    }
+                }.start();
                 finish();
                 intentDashboard.putExtra("iUser",iUser);
                 startActivity(intentDashboard);
+                return;
             }
             else {
                 if (!emailMatcher.matches()) {

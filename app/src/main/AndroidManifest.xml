@@ -26,6 +26,9 @@
             android:name=".control.RegisterActivity"
             android:exported="true" />
         <activity
+            android:name=".control.TempsmptActivity"
+            android:exported="true"/>
+        <activity
             android:name=".control.LoginActivity"
             android:exported="true">
             <intent-filter>
@@ -33,9 +36,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".control.TempsmptActivity"
-            android:exported="true"/>
     </application>
 
 </manifest>
