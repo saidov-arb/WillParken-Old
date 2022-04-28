@@ -25,7 +25,8 @@ public class RegisterActivity extends AppCompatActivity {
     Button btn_login,btn_register;
 
     Intent intentLogin;
-    Intent intentHome;
+    Intent intentDashboard;
+    Intent intentTempsmptActivity;
 
     User iUser;
 
@@ -44,9 +45,10 @@ public class RegisterActivity extends AppCompatActivity {
 
         btn_login = (Button) findViewById(R.id.btn_login);
         btn_register = (Button) findViewById(R.id.btn_register);
+        intentTempsmptActivity = new Intent(this, TempsmptActivity.class);
 
         intentLogin = new Intent(this, LoginActivity.class);
-        intentHome = new Intent(this, OutputActivity.class);
+        intentDashboard = new Intent(this, DashboardActivity.class);
 
         btn_login.setOnClickListener(v -> {
             finish();
@@ -89,8 +91,8 @@ public class RegisterActivity extends AppCompatActivity {
                 SerializationFactory.getInstance().persist(getApplicationContext());
                 Toast.makeText(getApplicationContext(),"Account created successfully!",Toast.LENGTH_LONG).show();
                 finish();
-                intentHome.putExtra("iUser",iUser);
-                startActivity(intentHome);
+                intentDashboard.putExtra("iUser",iUser);
+                startActivity(intentDashboard);
             }
             else {
                 if (!emailMatcher.matches()) {

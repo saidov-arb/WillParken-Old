@@ -14,6 +14,15 @@
             android:name=".control.OutputActivity"
             android:exported="true" />
         <activity
+            android:name=".control.DashboardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".control.EditProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".control.ViewProfileActivity"
+            android:exported="true" />
+        <activity
             android:name=".control.RegisterActivity"
             android:exported="true" />
         <activity
@@ -21,7 +30,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
