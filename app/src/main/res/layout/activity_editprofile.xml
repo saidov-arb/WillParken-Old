@@ -11,7 +11,7 @@
         tools:context=".control.EditProfileActivity">
 
         <EditText
-            android:id="@+id/editprofile_password"
+            android:id="@+id/editprofile_txt_password"
             android:layout_width="338dp"
             android:layout_height="44dp"
             android:layout_marginTop="40dp"
@@ -20,10 +20,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editprofile_tel" />
+            app:layout_constraintTop_toBottomOf="@+id/editprofile_txt_tel" />
 
         <EditText
-            android:id="@+id/editprofile_lastname"
+            android:id="@+id/editprofile_txt_lastname"
             android:layout_width="338dp"
             android:layout_height="44dp"
             android:layout_marginTop="40dp"
@@ -32,10 +32,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editprofile_firstname" />
+            app:layout_constraintTop_toBottomOf="@+id/editprofile_txt_firstname" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/viewprofile_txt_profileheader"
             android:layout_width="219dp"
             android:layout_height="54dp"
             android:layout_marginTop="20dp"
@@ -47,7 +47,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/editprofile_save"
+            android:id="@+id/editprofile_btn_save"
             android:layout_width="120dp"
             android:layout_height="51dp"
             android:layout_marginTop="152dp"
@@ -57,10 +57,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.872"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editprofile_password" />
+            app:layout_constraintTop_toBottomOf="@+id/editprofile_txt_password" />
 
         <Button
-            android:id="@+id/editprofile_cancel"
+            android:id="@+id/editprofile_btn_cancel"
             android:layout_width="120dp"
             android:layout_height="51dp"
             android:layout_marginTop="152dp"
@@ -70,10 +70,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.123"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editprofile_password" />
+            app:layout_constraintTop_toBottomOf="@+id/editprofile_txt_password" />
 
         <EditText
-            android:id="@+id/editprofile_firstname"
+            android:id="@+id/editprofile_txt_firstname"
             android:layout_width="338dp"
             android:layout_height="44dp"
             android:layout_marginTop="64dp"
@@ -82,10 +82,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            app:layout_constraintTop_toBottomOf="@+id/viewprofile_txt_profileheader" />
 
         <EditText
-            android:id="@+id/editprofile_tel"
+            android:id="@+id/editprofile_txt_tel"
             android:layout_width="338dp"
             android:layout_height="44dp"
             android:layout_marginTop="40dp"
@@ -94,7 +94,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editprofile_lastname" />
+            app:layout_constraintTop_toBottomOf="@+id/editprofile_txt_lastname" />
 
 
 

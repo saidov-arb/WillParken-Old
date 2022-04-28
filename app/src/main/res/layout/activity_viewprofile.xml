@@ -7,7 +7,7 @@
     tools:context=".control.ViewProfileActivity">
 
     <TextView
-        android:id="@+id/viewprofile_password"
+        android:id="@+id/viewprofile_txt_password"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="40dp"
@@ -16,10 +16,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewprofile_tel" />
+        app:layout_constraintTop_toBottomOf="@+id/viewprofile_txt_tel" />
 
     <TextView
-        android:id="@+id/viewprofile_lastname"
+        android:id="@+id/viewprofile_txt_lastname"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="40dp"
@@ -28,10 +28,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewprofile_firstname" />
+        app:layout_constraintTop_toBottomOf="@+id/viewprofile_txt_firstname" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/viewprofile_txt_profileheader"
         android:layout_width="103dp"
         android:layout_height="52dp"
         android:layout_marginTop="20dp"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/viewprofile_edit"
+        android:id="@+id/viewprofile_btn_edit"
         android:layout_width="181dp"
         android:layout_height="69dp"
         android:layout_marginTop="148dp"
@@ -51,10 +51,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewprofile_password" />
+        app:layout_constraintTop_toBottomOf="@+id/viewprofile_txt_password" />
 
     <TextView
-        android:id="@+id/viewprofile_firstname"
+        android:id="@+id/viewprofile_txt_firstname"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="64dp"
@@ -63,10 +63,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/viewprofile_txt_profileheader" />
 
     <TextView
-        android:id="@+id/viewprofile_tel"
+        android:id="@+id/viewprofile_txt_tel"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="40dp"
@@ -75,6 +75,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewprofile_lastname" />
+        app:layout_constraintTop_toBottomOf="@+id/viewprofile_txt_lastname" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
