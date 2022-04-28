@@ -26,8 +26,8 @@ public class LoginActivity extends AppCompatActivity {
     ImageView img_loginicon;
 
     Intent intentRegister;
-    Intent intentHome;
-    Intent intentTempsmptActivity;
+    Intent intentDashboard;
+//    Intent intentTempsmptActivity;
 
     User iUser;
 
@@ -46,8 +46,8 @@ public class LoginActivity extends AppCompatActivity {
         img_loginicon = (ImageView) findViewById(R.id.img_loginicon);
 
         intentRegister = new Intent(this, RegisterActivity.class);
-        intentHome = new Intent(this, OutputActivity.class);
-        intentTempsmptActivity = new Intent(this, TempsmptActivity.class);
+        intentDashboard = new Intent(this, DashboardActivity.class);
+//        intentTempsmptActivity = new Intent(this, TempsmptActivity.class);
 
         btn_login.setOnClickListener(v -> {
             clickOnLogin();
@@ -75,9 +75,10 @@ public class LoginActivity extends AppCompatActivity {
         }
         if (iUser != null)
         {
-            intentHome.putExtra("iUser",iUser);
+            intentDashboard.putExtra("iUser",iUser);
             finish();
-            startActivity(intentTempsmptActivity);
+//            startActivity(intentTempsmptActivity);
+            startActivity(intentDashboard);
         }else{
             txt_email.getBackground().setColorFilter(parseColor("red"), PorterDuff.Mode.SRC_ATOP);
             txt_password.getBackground().setColorFilter(parseColor("red"), PorterDuff.Mode.SRC_ATOP);
