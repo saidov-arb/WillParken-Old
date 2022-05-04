@@ -7,7 +7,7 @@
     tools:context=".control.TempsmptActivity">
 
     <EditText
-        android:id="@+id/txt_mailcontent"
+        android:id="@+id/tempsmtp_txt_mailcontent"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="100dp"
@@ -17,14 +17,14 @@
         android:hint="Mail-Content" />
 
     <Button
-        android:id="@+id/btn_send"
+        android:id="@+id/tempsmtp_btn_send"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:hint="SEND"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_mailcontent" />
+        app:layout_constraintTop_toBottomOf="@+id/tempsmtp_txt_mailcontent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

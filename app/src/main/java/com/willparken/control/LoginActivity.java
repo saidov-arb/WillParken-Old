@@ -39,11 +39,11 @@ public class LoginActivity extends AppCompatActivity {
 
         SerializationFactory.getInstance().restore(getApplicationContext());
 
-        txt_email = (EditText) findViewById(R.id.txt_email);
-        txt_password = (EditText) findViewById(R.id.txt_password);
-        btn_login = (Button) findViewById(R.id.btn_login);
-        btn_register = (Button) findViewById(R.id.btn_register);
-        img_loginicon = (ImageView) findViewById(R.id.img_loginicon);
+        txt_email = (EditText) findViewById(R.id.login_txt_email);
+        txt_password = (EditText) findViewById(R.id.login_txt_password);
+        btn_login = (Button) findViewById(R.id.login_btn_login);
+        btn_register = (Button) findViewById(R.id.login_btn_register);
+        img_loginicon = (ImageView) findViewById(R.id.login_img_loginicon);
 
         intentRegister = new Intent(this, RegisterActivity.class);
         intentDashboard = new Intent(this, DashboardActivity.class);

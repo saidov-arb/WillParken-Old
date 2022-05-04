@@ -19,7 +19,7 @@ public class OutputActivity extends AppCompatActivity {
         setContentView(R.layout.activity_output);
 
         iUser = (User) getIntent().getExtras().getSerializable("iUser");
-        txt_output = (TextView) findViewById(R.id.txt_output);
+        txt_output = (TextView) findViewById(R.id.output_txt_output);
 
         txt_output.setText(iUser.toString());
 

@@ -27,8 +27,8 @@ public class TempsmptActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tempsmtp);
         getSupportActionBar().hide();
 
-        txt_mailcontent = (EditText) findViewById(R.id.txt_mailcontent);
-        btn_send = (Button) findViewById(R.id.btn_send);
+        txt_mailcontent = (EditText) findViewById(R.id.tempsmtp_txt_mailcontent);
+        btn_send = (Button) findViewById(R.id.tempsmtp_btn_send);
 
         btn_send.setOnClickListener(e -> clickOnSend());
     }

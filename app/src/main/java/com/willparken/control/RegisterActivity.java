@@ -37,16 +37,16 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        txt_email = (EditText) findViewById(R.id.txt_email);
-        txt_password = (EditText) findViewById(R.id.txt_password);
-        txt_confirmpassword = (EditText) findViewById(R.id.txt_confirmpassword);
-        txt_firstname = (EditText) findViewById(R.id.txt_firstname);
-        txt_lastname = (EditText) findViewById(R.id.txt_lastname);
-        txt_address = (EditText) findViewById(R.id.txt_address);
-        txt_tel = (EditText) findViewById(R.id.txt_tel);
+        txt_email = (EditText) findViewById(R.id.register_txt_email);
+        txt_password = (EditText) findViewById(R.id.register_txt_password);
+        txt_confirmpassword = (EditText) findViewById(R.id.register_txt_confirmpassword);
+        txt_firstname = (EditText) findViewById(R.id.register_txt_firstname);
+        txt_lastname = (EditText) findViewById(R.id.register_txt_lastname);
+        txt_address = (EditText) findViewById(R.id.register_txt_address);
+        txt_tel = (EditText) findViewById(R.id.register_txt_tel);
 
-        btn_login = (Button) findViewById(R.id.btn_login);
-        btn_register = (Button) findViewById(R.id.btn_register);
+        btn_login = (Button) findViewById(R.id.register_btn_login);
+        btn_register = (Button) findViewById(R.id.register_btn_register);
         intentTempsmptActivity = new Intent(this, TempsmptActivity.class);
 
         intentLogin = new Intent(this, LoginActivity.class);
