@@ -7,7 +7,7 @@
     tools:context=".control.ViewProfileActivity">
 
     <TextView
-        android:id="@+id/viewprofile_txt_password"
+        android:id="@+id/viewprofile_txt_address"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginTop="40dp"
@@ -51,7 +51,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewprofile_txt_password" />
+        app:layout_constraintTop_toBottomOf="@+id/viewprofile_txt_address" />
 
     <TextView
         android:id="@+id/viewprofile_txt_firstname"

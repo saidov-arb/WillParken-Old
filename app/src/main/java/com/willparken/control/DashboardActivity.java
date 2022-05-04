@@ -55,6 +55,12 @@ public class DashboardActivity extends AppCompatActivity {
         fillFields();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        fillFields();
+    }
+
     public void openNewWindow(Intent i) {
         startActivity(i);
     }
