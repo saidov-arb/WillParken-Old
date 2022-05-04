@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".control.ParkingspotSearchMaskActivity">
+
+    <TextView
+        android:id="@+id/pssm_txt_header"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:text="Look for Parkingspot Availability"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pssm_txt_timefrom"
+        android:text="From"
+        android:textSize="20dp"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pssm_txt_header" />
+
+    <DatePicker
+        android:id="@+id/pssm_dat_from"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pssm_txt_timefrom" />
+
+    <TimePicker
+        android:id="@+id/pssm_tim_from"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.279"
+        app:layout_constraintStart_toEndOf="@+id/pssm_dat_from"
+        app:layout_constraintTop_toBottomOf="@+id/pssm_txt_timefrom" />
+
+    <TextView
+        android:id="@+id/pssm_txt_timeuntil"
+        android:text="Until"
+        android:textSize="20dp"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pssm_txt_timefrom" />
+
+    <DatePicker
+        android:id="@+id/pssm_dat_until"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pssm_txt_timeuntil" />
+
+    <TimePicker
+        android:id="@+id/pssm_tim_until"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.279"
+        app:layout_constraintStart_toEndOf="@+id/pssm_dat_until"
+        app:layout_constraintTop_toBottomOf="@+id/pssm_txt_timeuntil" />
+
+    <Button
+        android:id="@+id/pssm_btn_search"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="88dp"
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pssm_txt_timeuntil" />
+
+    <Button
+        android:id="@+id/pssm_btn_cancel"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:text="Cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pssm_btn_search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

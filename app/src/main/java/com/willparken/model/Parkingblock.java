@@ -53,6 +53,10 @@ public class Parkingblock implements Serializable {
         }
     }
 
+    public int getParkingSpotAmount(){
+        return parkingspots.size();
+    }
+
     @Override
     public String toString() {
         String reString = "Parkingblock - Name: "+getBlockname()+"\n";

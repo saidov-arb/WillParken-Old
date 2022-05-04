@@ -14,13 +14,19 @@
         <entry key="..\:/_SC/ZZZ_4_Jahrgang/_ITP/WIDM/WillParken/3_Sprinten/willParken/app/src/main/res/layout/activity_login.xml" value="0.24954710144927536" />
         <entry key="..\:/_SC/ZZZ_4_Jahrgang/_ITP/WIDM/WillParken/3_Sprinten/willParken/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1745" />
         <entry key="..\:/_SC/ZZZ_4_Jahrgang/_ITP/WIDM/WillParken/3_Sprinten/willParken/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1745" />
+        <entry key="app/src/main/res/drawable/customborder.xml" value="0.239" />
+        <entry key="app/src/main/res/drawable/customspacing.xml" value="0.239" />
         <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.2509057971014493" />
         <entry key="app/src/main/res/layout/activity_editprofile.xml" value="0.2509057971014493" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/layout/activity_output.xml" value="0.2509057971014493" />
+        <entry key="app/src/main/res/layout/activity_parkingspotsearchmask.xml" value="0.3204869588216146" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.1830505371093751" />
         <entry key="app/src/main/res/layout/activity_tempsmtp.xml" value="0.2509057971014493" />
+        <entry key="app/src/main/res/layout/activity_view_parkingblock.xml" value="0.2509057971014493" />
         <entry key="app/src/main/res/layout/activity_viewprofile.xml" value="0.2509057971014493" />
+        <entry key="app/src/main/res/layout/note_list_item.xml" value="0.2509057971014493" />
+        <entry key="app/src/main/res/layout/parking_block_item.xml" value="0.2246376811594203" />
       </map>
     </option>
   </component>

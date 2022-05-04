@@ -29,7 +29,7 @@ public class DashboardActivity extends AppCompatActivity {
     private CardView dashboard_cardview_editprofile, dashboard_cardview_checkreservations, dashboard_cardview_searchforparkingspot, dashboard_cardview_learn, dashboard_cardview_interests, dashboard_cardview_settings;
     private TextView dashboard_textview3;
 
-    Intent intentViewProfile, intentEditProfile, intentLogin;
+    Intent intentViewProfile, intentEditProfile, intentLogin, intentViewParkingblock;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -49,19 +49,20 @@ public class DashboardActivity extends AppCompatActivity {
         dashboard_cardview_interests = findViewById(R.id.dashboard_cardview_interests);
         dashboard_cardview_settings = findViewById(R.id.dashboard_cardview_settings);
 
+        intentViewProfile = new Intent(this, ViewProfileActivity.class);
+        intentEditProfile = new Intent(this, EditProfileActivity.class);
+        intentLogin = new Intent(this, LoginActivity.class);
+        intentViewParkingblock = new Intent(this, ViewParkingblockActivity.class);
 
         dashboard_btn_viewprofile.setOnClickListener(e -> openNewWindow(intentViewProfile));
         dashboard_btn_logout.setOnClickListener(e -> openNewWindow(intentLogin));
         dashboard_cardview_editprofile.setOnClickListener(e -> openNewWindow(intentEditProfile));
         dashboard_cardview_checkreservations.setOnClickListener(e -> showComingSoon());
-        dashboard_cardview_searchforparkingspot.setOnClickListener(e -> showComingSoon());
+        dashboard_cardview_searchforparkingspot.setOnClickListener(e -> openNewWindow(intentViewParkingblock));
         dashboard_cardview_learn.setOnClickListener(e -> showComingSoon());
         dashboard_cardview_interests.setOnClickListener(e -> showComingSoon());
         dashboard_cardview_settings.setOnClickListener(e -> showComingSoon());
 
-        intentViewProfile = new Intent(this, ViewProfileActivity.class);
-        intentEditProfile = new Intent(this, EditProfileActivity.class);
-        intentLogin = new Intent(this, LoginActivity.class);
 
         fillFields();
 
