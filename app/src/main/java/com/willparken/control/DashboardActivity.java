@@ -17,9 +17,6 @@ import com.willparken.model.User;
 public class DashboardActivity extends AppCompatActivity {
 
     public static User currentUser;
-    private Button dashboard_btn_viewprofile;
-    private ImageButton dashboard_btn_logout;
-    private CardView dashboard_cardview_editprofile, dashboard_cardview_checkreservations, dashboard_cardview_searchforparkingspot, dashboard_cardview_learn, dashboard_cardview_interests, dashboard_cardview_settings;
     private TextView dashboard_textview3;
 
     Intent intentViewProfile, intentEditProfile, intentLogin;
@@ -31,15 +28,15 @@ public class DashboardActivity extends AppCompatActivity {
 
         currentUser = (User) getIntent().getExtras().getSerializable("iUser");
 
-        dashboard_btn_logout = findViewById(R.id.dashboard_btn_logout);
+        ImageButton dashboard_btn_logout = findViewById(R.id.dashboard_btn_logout);
         dashboard_textview3 = findViewById(R.id.dashboard_textview3);
-        dashboard_btn_viewprofile = findViewById(R.id.dashboard_btn_viewprofile);
-        dashboard_cardview_editprofile = findViewById(R.id.dashboard_cardview_editprofile);
-        dashboard_cardview_checkreservations = findViewById(R.id.dashboard_cardview_checkreservations);
-        dashboard_cardview_searchforparkingspot = findViewById(R.id.dashboard_cardview_searchforparkingspot);
-        dashboard_cardview_learn = findViewById(R.id.dashboard_cardview_learn);
-        dashboard_cardview_interests = findViewById(R.id.dashboard_cardview_interests);
-        dashboard_cardview_settings = findViewById(R.id.dashboard_cardview_settings);
+        Button dashboard_btn_viewprofile = findViewById(R.id.dashboard_btn_viewprofile);
+        CardView dashboard_cardview_editprofile = findViewById(R.id.dashboard_cardview_editprofile);
+        CardView dashboard_cardview_checkreservations = findViewById(R.id.dashboard_cardview_checkreservations);
+        CardView dashboard_cardview_searchforparkingspot = findViewById(R.id.dashboard_cardview_searchforparkingspot);
+        CardView dashboard_cardview_learn = findViewById(R.id.dashboard_cardview_learn);
+        CardView dashboard_cardview_interests = findViewById(R.id.dashboard_cardview_interests);
+        CardView dashboard_cardview_settings = findViewById(R.id.dashboard_cardview_settings);
 
 
         dashboard_btn_viewprofile.setOnClickListener(e -> openNewWindow(intentViewProfile));
