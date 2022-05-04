@@ -2,10 +2,12 @@ package com.willparken.control;
 
 import static android.graphics.Color.parseColor;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.PorterDuff;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,9 +15,12 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.willparken.R;
+import com.willparken.model.Parkingspot;
+import com.willparken.model.ParkingspotReservation;
 import com.willparken.model.SerializationFactory;
 import com.willparken.model.User;
 
+import java.time.LocalDateTime;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -56,8 +61,6 @@ public class LoginActivity extends AppCompatActivity {
             finish();
             startActivity(intentRegister);
         });
-
-
     }
 
 
