@@ -32,18 +32,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
-            android:id="@+id/dashboard_btn_logout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="?attr/selectableItemBackground"
-            android:padding="8dp"
-            app:layout_constraintCircleRadius="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    <!--            android:src="@drawable/ic_logout"-->
+    <ImageButton
+        android:id="@+id/dashboard_btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:minWidth="16dp"
+        android:minHeight="16dp"
+        android:padding="8dp"
+        android:src="@drawable/ausloggen"
+        android:background="#00000000"
+        app:layout_constraintCircleRadius="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/dashboard_cardview_profile"
